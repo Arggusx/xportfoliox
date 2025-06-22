@@ -21,8 +21,8 @@ const Tools = () => {
     return (
         <section id="tools" className="tools py-20 bg-checkered">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center neon-text-blue">
-                    <span className="neon-text-pink">&lt;</span> Ferramentas & Tecnologias <span className="neon-text-pink">/&gt;</span>
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center neon-text-dark-blue">
+                    Ferramentas & Tecnologias
                 </h2>
                 <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto font-bold">
                     Tecnologias que domino e utilizo regularmente para criar soluções incríveis.

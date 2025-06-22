@@ -12,11 +12,11 @@ function About() {
                     </div>
 
                     <div className="md:w-2/3 md:pl-12 font-bold">
-                        <h1 className="text-3xl w-[350px] sm:text-3xl sm:text-left text-center font-bold mb-10 leading-relaxed neon-text-blue ">
+                        <h1 className="text-3xl w-[350px] sm:text-3xl sm:text-left text-center font-bold mb-10 ml-3 md:ml-0 leading-relaxed neon-text-blue ">
                             Olá, eu sou <br />
                             <span className="neon-text-pink"> Douglas Moreira</span>
                         </h1>
-                        <p className="text-gray-300 mb-10 ml-5 sm:ml-0 text-justify w-[80%] leading-relaxed text-base">
+                        <p className="text-gray-300 mb-10 ml-9 md:ml-0 sm:ml-0 text-justify w-[80%] leading-relaxed text-base">
                             Sou um desenvolvedor apaixonado por tecnologia com mais de 5 anos de experiência criando soluções digitais inovadoras. Minha jornada começou quando eu era adolescente, mexendo com scripts e modificando jogos, e desde então nunca parei de aprender e evoluir.
                         </p>
 
@@ -28,7 +28,7 @@ function About() {
                             </div>
                             <div className="p-4 w-full neon-border-pink rounded-lg backdrop-blur bg-slate-900">
                                 <h4 className="font-bold mb-2 neon-text-pink text-sm">Experiência</h4>
-                                <p className="text-gray-300 text-sm leading-relaxed">5+ anos de desenvolvimento web</p>
+                                <p className="text-gray-300 text-sm leading-relaxed">2+ anos de desenvolvimento web</p>
                             </div>
                         </div>
                     </div>
