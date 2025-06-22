@@ -11,15 +11,15 @@ function App() {
 
 
   return (
-    <>
-      <Header />
+    <div>
+      < Header />
       <Welcome />
       <About />
       <ProjectCard />
       <Tools />
 
       <Footer />
-    </>
+    </div >
   )
 }
 

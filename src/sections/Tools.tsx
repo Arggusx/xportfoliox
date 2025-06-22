@@ -21,7 +21,7 @@ const Tools = () => {
     return (
         <section id="tools" className="tools py-20 bg-checkered">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center neon-text-blue">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center neon-text-blue">
                     <span className="neon-text-pink">&lt;</span> Ferramentas & Tecnologias <span className="neon-text-pink">/&gt;</span>
                 </h2>
                 <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto font-bold">
@@ -36,9 +36,9 @@ const Tools = () => {
                         >
                             <div className="relative">
                                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-50 blur transition duration-300"></div>
-                                <img src={`${tool.icon}`} className="relative h-16 w-16 md:h-20 md:w-20 transform transition-transform duration-300 mx-auto" />
+                                <img src={`${tool.icon}`} className="relative sm:h-16 sm:w-10 h-12 w-16 md:h-20 md:w-20 transform transition-transform duration-300 mx-auto" />
                             </div>
-                            <h3 className={`tracking-wide font-semibold group-hover:text-white text-gray-300 text-shadow-${tool.shadow} pt-2 text-sm md:text-base  transition-colors duration-200`}>{tool.name}</h3>
+                            <h3 className={`tracking-wide font-semibold group-hover:text-white text-gray-300 text-shadow-${tool.shadow} pt-2 sm:text-sm text-xs md:text-base  transition-colors duration-200`}>{tool.name}</h3>
                         </div>
                     ))}
 
