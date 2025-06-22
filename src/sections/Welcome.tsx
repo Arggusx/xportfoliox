@@ -5,12 +5,12 @@ function Welcome() {
                 {/* Texto */}
                 <div className="md:w-1/2 mb-10 md:mb-0  md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 neon-text-blue break-words">
-                        Olá, eu sou <span className="neon-text-pink">Douglas</span>
+                        Desenvolvedor <span className="neon-text-pink"> Full Stack</span>
                     </h1>
                     <h2 className="text-2xl sm:text-2xl md:text-3xl mb-6 neon-text-purple break-words">
                         Desenvolvedor (quase) Full Stack
                     </h2>
-                    <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light">
+                    <p className="text-sm md:text-lg text-gray-400 max-w-xl leading-relaxed font-light">
                         Criando experiências digitais impressionantes com tecnologias de ponta e designs inovadores.
                     </p>
 
