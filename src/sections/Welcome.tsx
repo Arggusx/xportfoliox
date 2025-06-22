@@ -5,7 +5,7 @@ function Welcome() {
                 {/* Texto */}
                 <div className="md:w-1/2 mb-10 md:mb-0  md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 neon-text-blue break-words">
-                        Desenvolvedor <span className="neon-text-pink"> Full Stack</span>
+                        Desenvolvedor <br /><span className="neon-text-pink"> Full Stack</span>
                     </h1>
                     <h2 className="text-2xl sm:text-2xl md:text-3xl mb-6 neon-text-purple break-words">
                         Desenvolvedor (quase) Full Stack
@@ -16,10 +16,10 @@ function Welcome() {
 
                     {/* Botões */}
                     <div className="flex flex-wrap gap-4 mt-10  md:justify-start">
-                        <a href="#projects" className="px-6 py-3 bg-transparent neon-border-blue text-white rounded-lg neon-btn hover:bg-blue-900 hover:bg-opacity-30">
+                        <a href="#projects" className="px-6 py-3 neon-border-blue text-white rounded-lg neon-btn hover:bg-blue-900 hover:bg-opacity-30 backdrop-blur bg-slate-900">
                             Meus Projetos
                         </a>
-                        <a href="#about" className="px-6 py-3 bg-transparent neon-border-pink text-white rounded-lg neon-btn hover:bg-pink-900 hover:bg-opacity-30">
+                        <a href="#about" className="px-6 py-3 backdrop-blur bg-slate-900 neon-border-pink text-white rounded-lg neon-btn hover:bg-pink-900 hover:bg-opacity-30">
                             Sobre Mim
                         </a>
                     </div>
@@ -27,7 +27,7 @@ function Welcome() {
 
                 {/* Imagem */}
                 <div className="md:w-1/2 flex justify-center">
-                    <div className="relative w-[220px] sm:w-[250px] md:w-[300px]">
+                    <div className="relative w-[320px] sm:w-[250px] md:w-[500px]">
                         <div className="absolute inset-0 rounded-full bg-[var(--neon-blue)] blur-xl opacity-30 animate-pulse"></div>
                         <img
                             src="Coding.gif"

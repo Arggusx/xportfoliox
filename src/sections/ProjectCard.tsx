@@ -4,8 +4,8 @@ const Projects = () => {
     return (
         <section id="projects" className="section py-20 bg-checkered">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center neon-text-purple">
-                    <span className="neon-text-blue">&lt;</span> Meus Projetos <span className="neon-text-blue">/&gt;</span>
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center neon-text-dark-blue">
+                    Meus Projetos
                 </h2>
                 <p className="text-sm md:text-md text-center md:ml-90 lg:ml-110 sm:mb-30 text-gray-400 max-w-xl leading-relaxed font-light mb-10">
                     Alguns dos projetos em que trabalhei, combinando criatividade, tecnologia e performance.
@@ -38,7 +38,7 @@ const Projects = () => {
                 </div>
 
                 <div className="text-center mt-12">
-                    <a href="#" className="inline-block px-6 py-3 bg-transparent neon-border-blue text-white rounded-lg neon-btn hover:bg-blue-900 hover:bg-opacity-30">
+                    <a href="#" className="inline-block px-6 py-3 backdrop-blur bg-slate-900 neon-border-blue text-white rounded-lg neon-btn hover:bg-blue-900 hover:bg-opacity-30">
                         Ver Todos os Projetos
                     </a>
                 </div>
