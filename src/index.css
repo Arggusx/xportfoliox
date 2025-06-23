@@ -80,12 +80,52 @@ body {
   text-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899;
 }
 
+.neon-text-yellow {
+  color: rgb(236, 209, 32);
+  text-shadow: 0 0 5px rgb(236, 209, 32), 0 0 10px rgb(236, 209, 32);
+}
+
+.neon-text-green {
+  color: rgb(35, 228, 42);
+  text-shadow: 0 0 5px rgb(35, 228, 42), 0 0 10px rgb(35, 228, 42);
+}
+
+.neon-text-yellow-light {
+  color: rgb(255, 240, 101);
+  text-shadow: 0 0 5px rgb(255, 240, 101), 0 0 10px rgb(255, 240, 101);
+}
+
+.neon-text-red {
+  color: rgb(220, 85, 85);
+  text-shadow: 0 0 5px rgb(220, 85, 85), 0 0 10px rgb(220, 85, 85);
+}
+
 .neon-text-purple {
   color: #a855f7;
   text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7;
 }
 
 /* COR PERSONALIZADA DAS BORDAS */
+.neon-border-yellow {
+  border: 2px solid rgb(236, 209, 32);
+  box-shadow: 0 0 5px rgb(236, 209, 32);
+}
+
+.neon-border-yellow-light {
+  border: 2px solid rgb(255, 240, 101);
+  box-shadow: 0 0 5px rgb(255, 240, 101);
+}
+
+.neon-border-green {
+  border: 2px solid rgb(35, 228, 42);
+  box-shadow: 0 0 5px rgb(35, 228, 42);
+}
+
+.neon-border-red {
+  border: 2px solid rgb(220, 85, 85);
+  box-shadow: 0 0 5px rgb(220, 85, 85);
+}
+
 .neon-border-python {
   border: 2px solid #38bdf8;
   box-shadow: 0 0 5px #ffd43b;
@@ -185,6 +225,10 @@ body {
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.project-card-color:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 

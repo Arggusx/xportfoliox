@@ -29,7 +29,7 @@ function Header() {
                 }`}
         >
             <div
-                className={`flex justify-between py-3 px-5 sm:px-6 transition-all duration-300
+                className={`flex justify-between py-3 px-5 sm:px-25 transition-all duration-300
                         ${menuOpen ?
                         "bg-[#030014]" : "bg-transparent"
                     }`}

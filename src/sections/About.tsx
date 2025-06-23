@@ -7,8 +7,8 @@ function About() {
                 </h2>
 
                 <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/3 mb-10 md:mb-0 flex justify-center">
-                        <img src="minha-foto.jpg" alt="About Me" className="profile-img rounded-full w-70 h-70 object-cover transition-transform duration-300 hover:opacity-80 hover:scale-110" />
+                    <div className="md:w-1/3 mb-10 md:mb-0 md:mt-20 flex justify-center">
+                        <img src="minha-foto.jpg" alt="About Me" className="profile-img rounded-full w-70 h-70 md:w-100 md:h-100 object-cover transition-transform duration-300 hover:opacity-80 hover:scale-110" />
                     </div>
 
                     <div className="md:w-2/3 md:pl-12 font-bold">
@@ -17,7 +17,10 @@ function About() {
                             <span className="neon-text-pink"> Douglas Moreira</span>
                         </h1>
                         <p className="text-gray-300 mb-10 ml-9 md:ml-0 sm:ml-0 text-justify w-[80%] leading-relaxed text-base">
-                            Sou um desenvolvedor apaixonado por tecnologia com mais de 5 anos de experiência criando soluções digitais inovadoras. Minha jornada começou quando eu era adolescente, mexendo com scripts e modificando jogos, e desde então nunca parei de aprender e evoluir.
+                            Sou um desenvolvedor de 22 anos, estudante de Ciência da Computação (6º período) e atualmente estagiando na área. Tenho uma base sólida em desenvolvimento web, com foco principal em front-end utilizando React, TypeScript e Tailwind, mas também atuo no back-end com Node.js e banco de dados em projetos pessoais — o que me proporciona uma visão mais completa das soluções que construo. <br />
+                        </p>
+                        <p className="text-gray-300 mb-10 ml-9 md:ml-0 sm:ml-0 text-justify w-[80%] leading-relaxed text-base">
+                            Minha jornada começou com curiosidade e prática, e hoje continuo criando projetos próprios, inclusive um jogo que desenvolvi por conta própria. Busco constantemente me tornar um profissional mais independente, dominando a lógica e o funcionamento das ferramentas que utilizo, em vez de apenas seguir fórmulas prontas.
                         </p>
 
 

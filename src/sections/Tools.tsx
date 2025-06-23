@@ -24,8 +24,8 @@ const Tools = () => {
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center neon-text-dark-blue">
                     Ferramentas & Tecnologias
                 </h2>
-                <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto font-bold">
-                    Tecnologias que domino e utilizo regularmente para criar soluções incríveis.
+                <p className="text-center text-gray-400 text-sm md:text-md mb-16 max-w-2xl mx-auto font-bold">
+                    Tecnologias que utilizo regularmente para criar boas soluções.
                 </p>
 
                 <div className="grid grid-cols-4 md:grid-cols-3 lg:grid-cols-7 gap-5 lg:gap-8 w-[90%] lg:w-[70%] md:w-[60%] mx-auto">
