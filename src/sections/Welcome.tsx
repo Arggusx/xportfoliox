@@ -10,7 +10,7 @@ function Welcome() {
                     <h2 className="text-2xl sm:text-2xl md:text-2xl mb-6 neon-text-purple break-words">
                         Transformando Ideias em Soluções Digitais
                     </h2>
-                    <p className="text-sm md:text-lg font-semibold text-gray-400 max-w-xl leading-relaxed font-light">
+                    <p className="text-sm md:text-lg font-semibold text-gray-400 max-w-xl leading-relaxed">
                         Explorando o universo do desenvolvimento web com foco em performance, acessibilidade e visual marcante.
                     </p>
 
