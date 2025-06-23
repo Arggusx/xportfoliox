@@ -61,7 +61,7 @@ const Projects = () => {
                     <ProjectCard
                         link="finance.png"
                         title="App de Finanças"
-                        desc="Um jogo autoral, estilo Topdown e inspirado no clássico Stardew Valley, totalmente em pixel art."
+                        desc="Aplicativo simples para organizar finanças pessoais, acompanhar entradas e saídas e ter mais controle sobre o seu dinheiro. "
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="red"
                         linkDemo="https://github.com/Arggusx/FinanceApp"
@@ -87,17 +87,17 @@ const ProjectCard = ({ linkDemo, link, title, desc, color }: { linkDemo: string;
                 <h3 className={`text-xl font-bold mb-2 neon-text-${color}`}>{title}</h3>
                 <p className="text-gray-300 text-sm font-semibold  mb-4">{desc}</p>
 
-                <div className="justify-between flex">
+                <div className="flex justify-between relative bottom-0">
                     <a
                         href={`${linkDemo}`}
-                        className="justify-between flex gap-2 hover:cursor-pointer text-blue-400 font-semibold py-2 px-4 text-xs"
+                        className="justify-between flex gap-2 absolute hover:cursor-pointer text-blue-400 font-semibold py-2 text-xs"
                         target="_blank"
                     >
                         Demonstração
 
                         <ExternalLink className="w-4 h-4 transition" /></a>
                     <button
-                        className={`gap-2 justify-between flex hover:cursor-pointer text-neon-${color} font-bold text-xs hover:underline text-white/90 py-2 px-4 backdrop-blur bg-white/5 rounded-md neon-glow`}
+                        className={`gap-2 justify-between absolute right-0 flex hover:cursor-pointer text-neon-${color} font-bold text-xs hover:underline text-white/90 py-2 px-4 backdrop-blur bg-white/5 rounded-md neon-glow`}
                         onClick={() => setShowModal(true)}
                     >
                         Detalhes <ArrowRight className="w-4 h-4 transition" />
