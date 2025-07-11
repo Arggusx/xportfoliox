@@ -1,6 +1,14 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
+const panelUrl = import.meta.env.VITE_URL_PANEL
+const menuUrl = import.meta.env.VITE_URL_MENU
+const sanctUrl = import.meta.env.VITE_URL_SANCT
+const repoUrlGame = import.meta.env.VITE_URL_GIT_GAME
+const repoAppUrl = import.meta.env.VITE_URL_APP
+const langbossUrl = import.meta.env.VITE_LANGBOSS
+
+
 const Projects = () => {
     return (
         <section id="projects" className="section py-20 bg-checkered">
@@ -19,7 +27,7 @@ const Projects = () => {
                         desc="Painel de administração do sistema de cardápio online, para o gerenciamento de pedidos."
                         //techs={["React", "Node.js", "Prisma", "TypeScript"]}
                         color="blue"
-                        linkDemo="https://panel-menu-eng-soft.vercel.app/"
+                        linkDemo={panelUrl}
                     />
 
                     <ProjectCard
@@ -28,7 +36,7 @@ const Projects = () => {
                         desc="Site principal do sistema de cardápio online. Ele permite que os usuários façam pedidos e acompanhem em tempo real."
                         //techs={["Flutter", "Firebase", "Dart"]}
                         color="yellow"
-                        linkDemo="https://online-menu-lab-eng-soft.vercel.app/"
+                        linkDemo={menuUrl}
                     />
 
                     <ProjectCard
@@ -37,7 +45,7 @@ const Projects = () => {
                         desc="Site desenvolvido para ajudar pessoas que gostariam de aprender mais sobre a religião católica."
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="yellow-light"
-                        linkDemo="https://sanct-digital.vercel.app/"
+                        linkDemo={sanctUrl}
                     />
 
                     <ProjectCard
@@ -46,7 +54,7 @@ const Projects = () => {
                         desc="LangBoss é mais do que uma simples plataforma de tradução; é uma experiência de imersão linguística."
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="yellow"
-                        linkDemo="https://langboss.vercel.app/"
+                        linkDemo={langbossUrl}
                     />
 
                     <ProjectCard
@@ -55,7 +63,7 @@ const Projects = () => {
                         desc="Um jogo autoral, estilo Topdown e inspirado no clássico Stardew Valley, totalmente em pixel art."
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="green"
-                        linkDemo="https://github.com/Arggusx/ProjetoTopDown/releases"
+                        linkDemo={repoUrlGame}
                     />
 
                     <ProjectCard
@@ -64,7 +72,7 @@ const Projects = () => {
                         desc="Aplicativo simples para organizar finanças pessoais, acompanhar entradas e saídas e ter mais controle sobre o seu dinheiro. "
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="red"
-                        linkDemo="https://github.com/Arggusx/FinanceApp"
+                        linkDemo={repoAppUrl}
                     />
                 </div>
 
@@ -93,7 +101,7 @@ const ProjectCard = ({ linkDemo, link, title, desc, color }: { linkDemo: string;
                         className="justify-between flex gap-2 absolute hover:cursor-pointer text-blue-400 font-semibold py-2 text-xs"
                         target="_blank"
                     >
-                        Demonstração
+                        Ver
 
                         <ExternalLink className="w-4 h-4 transition" /></a>
                     <button
