@@ -19,8 +19,8 @@ function Welcome() {
                         <a href="#projects" className="px-6 py-3 neon-border-blue text-white rounded-lg neon-btn hover:bg-blue-900 hover:bg-opacity-30 backdrop-blur bg-slate-900">
                             Meus Projetos
                         </a>
-                        <a href="#about" className="px-6 py-3 backdrop-blur bg-slate-900 neon-border-pink text-white rounded-lg neon-btn hover:bg-pink-900 hover:bg-opacity-30">
-                            Sobre Mim
+                        <a href="#contacts" className="px-6 py-3 backdrop-blur bg-slate-900 neon-border-pink text-white rounded-lg neon-btn hover:bg-pink-900 hover:bg-opacity-30">
+                            Contatos
                         </a>
                     </div>
                 </div>

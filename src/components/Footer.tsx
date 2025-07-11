@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className=" bg-opacity-90 py-5 border-t bg-checkered border-gray-800">
+        <footer id="contacts" className=" bg-opacity-90 py-5 border-t bg-checkered border-gray-800">
             <div className="container mx-auto px-4">
                 <div className="flex md:justify-between md:mt-5 flex-col gap-5 md:flex-row">
 
@@ -58,7 +58,7 @@ const Footer = () => {
                             href="https://mail.google.com/mail/?view=cm&to=dougclasher9@gmail.com"
                             target="_blank"
                         >
-                            <i className="fas fa-envelope pt-0.5 pr-1 sm:text-md text-[15px]"></i> dougclasher9@gmail.com
+                            <i className="fas fa-envelope pt-0.5 pr-1 sm:text-md text-[15px]"></i> Email
                         </a>
                         <a
                             className="text-gray-400 mt-2 text-sm font-bold sm:text-md flex gap-2 hover:cursor-pointer"
@@ -66,7 +66,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <i className="fab fa-whatsapp  sm:text-md text-[17px]"></i>(82) 99612-5491
+                            <i className="fab fa-whatsapp  sm:text-md text-[17px]"></i>Whatsapp
                         </a>
                     </div>
                 </div>
