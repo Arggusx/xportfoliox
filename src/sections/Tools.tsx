@@ -14,7 +14,8 @@ const toolsData = [
     { name: 'C#', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', shadow: 'c', border: 'c' },
     { name: 'Postgre SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg', shadow: 'post', border: 'post' },
     { name: 'Type Script', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg', shadow: 'ts', border: 'ts' },
-
+    { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg', shadow: 'laravel', border: 'laravel' },
+    { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg', shadow: 'php', border: 'php' },
 ];
 
 const Tools = () => {

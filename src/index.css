@@ -170,7 +170,15 @@ body {
   box-shadow: 0 0 5px #38bdf8;
 }
 
+.neon-border-laravel {
+  border: 2px solid rgba(255, 0, 0, 0.699);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.699);
+}
 
+.neon-border-php {
+  border: 2px solid rgba(0, 119, 255, 0.699);
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.699);
+}
 
 
 
