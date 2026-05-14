@@ -40,8 +40,8 @@ const Projects = () => {
                     />
 
                     <ProjectCard
-                        link="sanct.png"
-                        title="Sanct Digital"
+                        link="oratio-daily.png"
+                        title="Oratio Daily"
                         desc="Site desenvolvido para ajudar pessoas que gostariam de aprender mais sobre a religião católica."
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="yellow-light"
@@ -67,8 +67,8 @@ const Projects = () => {
                     />
 
                     <ProjectCard
-                        link="finance.png"
-                        title="App de Finanças"
+                        link="ponto.png"
+                        title="Sistema de Ponto Eletrônico"
                         desc="Aplicativo simples para organizar finanças pessoais, acompanhar entradas e saídas e ter mais controle sobre o seu dinheiro. "
                         //techs={["Three.js", "WebSockets", "JavaScript"]}
                         color="red"
