@@ -7,6 +7,8 @@ const sanctUrl = import.meta.env.VITE_URL_SANCT
 const repoUrlGame = import.meta.env.VITE_URL_GIT_GAME
 const repoAppUrl = import.meta.env.VITE_URL_APP
 const langbossUrl = import.meta.env.VITE_LANGBOSS
+const karateUrl = import.meta.env.VITE_KARATE
+
 
 
 const Projects = () => {
@@ -74,6 +76,16 @@ const Projects = () => {
                         color="red"
                         linkDemo={repoAppUrl}
                     />
+
+                    <ProjectCard
+                        link="karate.png"
+                        title="Karate"
+                        desc="Plataforma completa de gestão de academias de Karatê, desenvolvida para ajudar os professores e alunos a entender melhor sobre a cultura e prática do Karatê-dō."
+                        //techs={["Three.js", "WebSockets", "JavaScript"]}
+                        color="green"
+                        linkDemo={karateUrl}
+                    />
+
                 </div>
 
                 <div className="text-center mt-12">
