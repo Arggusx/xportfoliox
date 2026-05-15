@@ -8,7 +8,7 @@ function Welcome() {
                 {/* Texto */}
                 <div className="md:w-1/2 mb-10 md:mb-0  md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 neon-text-blue break-words">
-                        Desenvolvedor <br /><span className="neon-text-pink"> Full Stack*</span>
+                        Desenvolvedor <br /><span className="neon-text-pink">Front-end</span>
                     </h1>
                     <h2 className="text-2xl sm:text-2xl md:text-2xl mb-6 neon-text-purple break-words">
                         Transformando Ideias em Soluções Digitais
