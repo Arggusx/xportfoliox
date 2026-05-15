@@ -1,74 +1,81 @@
-import { useRef, useMemo } from 'react';
+import { useRef, useEffect, useMemo, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float, useGLTF } from '@react-three/drei';
+import { OrbitControls, Float, useGLTF, useTexture, Environment } from '@react-three/drei';
 import * as THREE from 'three';
 
-const MODEL_PATH = '/models/DamagedHelmet.glb';
+const MODEL_PATH = '/models/RetroBonnie.gltf';
+const TEXTURE_PATH = '/models/BonnieTexture.png';
 
 function LoadedModel() {
     const { scene } = useGLTF(MODEL_PATH);
+    const texture = useTexture(TEXTURE_PATH);
     const modelRef = useRef<THREE.Group>(null);
+    const rightArmRef = useRef<THREE.Object3D | null>(null);
+    const leftArmRef = useRef<THREE.Object3D | null>(null);
+    const initialRotRight = useRef<number>(0);
+    const initialRotLeft = useRef<number>(0);
+
+    useEffect(() => {
+        if (scene && texture) {
+            texture.flipY = false; // GLTF exige flipY = false
+            texture.colorSpace = THREE.SRGBColorSpace;
+            
+            scene.traverse((child) => {
+                const mesh = child as THREE.Mesh;
+                if (mesh.isMesh) {
+                    mesh.material = new THREE.MeshStandardMaterial({
+                        map: texture,
+                        color: new THREE.Color('#ffffff'),
+                        metalness: 0.6,
+                        roughness: 0.4,
+                    });
+                }
+            });
+
+            rightArmRef.current = scene.getObjectByName('Lowerarm.R') || scene.getObjectByName('Upperarm.R') || null;
+            leftArmRef.current = scene.getObjectByName('Lowerarm.L') || scene.getObjectByName('Upperarm.L') || null;
+
+            if (rightArmRef.current) initialRotRight.current = rightArmRef.current.rotation.x;
+            if (leftArmRef.current) initialRotLeft.current = leftArmRef.current.rotation.x;
+        }
+    }, [scene, texture]);
 
     useFrame(({ clock }) => {
         if (!modelRef.current) return;
-        modelRef.current.position.y = Math.sin(clock.getElapsedTime() * 0.8) * 0.08;
+        const t = clock.getElapsedTime();
+        modelRef.current.position.y = -1 + Math.sin(t * 0.8) * 0.08;
+
+        if (rightArmRef.current) {
+            rightArmRef.current.rotation.x = initialRotRight.current + Math.sin(t * 2) * 0.5;
+        }
+        if (leftArmRef.current) {
+            leftArmRef.current.rotation.x = initialRotLeft.current + Math.sin(t * 2 + Math.PI) * 0.5;
+        }
     });
 
     return (
-        <group ref={modelRef} scale={1.8}>
+        <group ref={modelRef} scale={0.15} position={[0, -1, 0]}>
             <primitive object={scene} />
         </group>
     );
 }
 
 useGLTF.preload(MODEL_PATH);
+useTexture.preload(TEXTURE_PATH);
 
-function OrbitRing({
-    radius,
-    tubeRadius,
-    color,
-    speed,
-    axis,
-}: {
-    radius: number;
-    tubeRadius: number;
-    color: string;
-    speed: number;
-    axis: 'x' | 'y' | 'z';
-}) {
-    const ref = useRef<THREE.Mesh>(null);
-
-    useFrame(({ clock }) => {
-        if (!ref.current) return;
-        ref.current.rotation[axis] = clock.getElapsedTime() * speed;
-    });
-
-    return (
-        <mesh ref={ref}>
-            <torusGeometry args={[radius, tubeRadius, 12, 64]} />
-            <meshBasicMaterial
-                color={color}
-                transparent
-                opacity={0.4}
-                side={THREE.DoubleSide}
-            />
-        </mesh>
-    );
-}
-
-function Particles({ count = 100 }: { count?: number }) {
+function FNAFParticles({ count = 150 }: { count?: number }) {
     const ref = useRef<THREE.Points>(null);
 
     const [positions, colors] = useMemo(() => {
         const pos = new Float32Array(count * 3);
         const col = new Float32Array(count * 3);
-        const neonBlue = new THREE.Color('#00d4ff');
-        const neonPink = new THREE.Color('#ff2d75');
-        const neonPurple = new THREE.Color('#b44dff');
-        const palette = [neonBlue, neonPink, neonPurple];
+        const bloodRed = new THREE.Color('#8b0000');
+        const darkPurple = new THREE.Color('#4a0072');
+        const staticGray = new THREE.Color('#666666');
+        const palette = [bloodRed, darkPurple, staticGray];
 
         for (let i = 0; i < count; i++) {
-            const r = 3 + Math.random() * 5;
+            const r = 2 + Math.random() * 6;
             const theta = Math.random() * Math.PI * 2;
             const phi = Math.acos(2 * Math.random() - 1);
 
@@ -86,7 +93,12 @@ function Particles({ count = 100 }: { count?: number }) {
 
     useFrame(({ clock }) => {
         if (!ref.current) return;
-        ref.current.rotation.y = clock.getElapsedTime() * 0.03;
+        ref.current.rotation.y = clock.getElapsedTime() * 0.05;
+        if (Math.random() > 0.95) {
+            ref.current.position.x = (Math.random() - 0.5) * 0.1;
+        } else {
+            ref.current.position.x = 0;
+        }
     });
 
     return (
@@ -96,10 +108,10 @@ function Particles({ count = 100 }: { count?: number }) {
                 <bufferAttribute attach="attributes-color" args={[colors, 3]} />
             </bufferGeometry>
             <pointsMaterial
-                size={0.04}
+                size={0.06}
                 vertexColors
                 transparent
-                opacity={0.7}
+                opacity={0.8}
                 sizeAttenuation
                 depthWrite={false}
             />
@@ -107,42 +119,77 @@ function Particles({ count = 100 }: { count?: number }) {
     );
 }
 
-function OrbitingSpheres() {
+function FloatingPizzas() {
     const groupRef = useRef<THREE.Group>(null);
-
-    const spheres = useMemo(() => {
-        const arr = [];
-        const clrs = ['#00d4ff', '#ff2d75', '#b44dff', '#00d4ff', '#ff2d75'];
-        for (let i = 0; i < 5; i++) {
-            arr.push({
-                angle: (i / 5) * Math.PI * 2,
-                radius: 2.5 + Math.random() * 0.5,
-                speed: 0.3 + Math.random() * 0.3,
-                size: 0.06 + Math.random() * 0.06,
-                color: clrs[i],
-                yOffset: (Math.random() - 0.5) * 1.5,
-            });
-        }
-        return arr;
+    const items = useMemo(() => {
+        return Array.from({ length: 5 }).map((_, i) => ({
+            angle: (i / 5) * Math.PI * 2,
+            radius: 2.5 + Math.random() * 1.5,
+            speed: 0.15 + Math.random() * 0.15,
+            size: 0.2 + Math.random() * 0.15,
+            yOffset: (Math.random() - 0.5) * 2,
+            rotSpeedX: Math.random() * 2,
+            rotSpeedY: Math.random() * 2,
+        }));
     }, []);
 
     useFrame(({ clock }) => {
         if (!groupRef.current) return;
         const t = clock.getElapsedTime();
         groupRef.current.children.forEach((child, i) => {
-            const s = spheres[i];
+            const s = items[i];
             child.position.x = Math.cos(s.angle + t * s.speed) * s.radius;
             child.position.z = Math.sin(s.angle + t * s.speed) * s.radius;
-            child.position.y = s.yOffset + Math.sin(t * 0.5 + i) * 0.3;
+            child.position.y = s.yOffset + Math.sin(t * 0.8 + i) * 0.4;
+            child.rotation.x += 0.01 * s.rotSpeedX;
+            child.rotation.y += 0.01 * s.rotSpeedY;
         });
     });
 
     return (
         <group ref={groupRef}>
-            {spheres.map((s, i) => (
+            {items.map((s, i) => (
                 <mesh key={i}>
-                    <sphereGeometry args={[s.size, 8, 8]} />
-                    <meshBasicMaterial color={s.color} />
+                    <cylinderGeometry args={[s.size, s.size, 0.03, 16]} />
+                    <meshStandardMaterial color="#fca311" roughness={0.6} />
+                </mesh>
+            ))}
+        </group>
+    );
+}
+
+function FloatingCheckers() {
+    const groupRef = useRef<THREE.Group>(null);
+    const items = useMemo(() => {
+        return Array.from({ length: 6 }).map((_, i) => ({
+            angle: (i / 6) * Math.PI * 2,
+            radius: 3 + Math.random() * 1.5,
+            speed: -0.1 - Math.random() * 0.15,
+            size: 0.15 + Math.random() * 0.15,
+            yOffset: (Math.random() - 0.5) * 3,
+            rotSpeed: Math.random() * 1.5,
+        }));
+    }, []);
+
+    useFrame(({ clock }) => {
+        if (!groupRef.current) return;
+        const t = clock.getElapsedTime();
+        groupRef.current.children.forEach((child, i) => {
+            const s = items[i];
+            child.position.x = Math.cos(s.angle + t * s.speed) * s.radius;
+            child.position.z = Math.sin(s.angle + t * s.speed) * s.radius;
+            child.position.y = s.yOffset + Math.cos(t * 0.5 + i) * 0.5;
+            child.rotation.x += 0.01 * s.rotSpeed;
+            child.rotation.z += 0.01 * s.rotSpeed;
+        });
+    });
+
+    return (
+        <group ref={groupRef}>
+            {items.map((s, i) => (
+                <mesh key={i}>
+                    <boxGeometry args={[s.size, s.size, s.size]} />
+                    <meshStandardMaterial color={i % 2 === 0 ? '#111111' : '#eeeeee'} roughness={0.8} />
                 </mesh>
             ))}
         </group>
@@ -152,29 +199,31 @@ function OrbitingSpheres() {
 function Scene() {
     return (
         <>
-            <ambientLight intensity={0.4} />
-            <directionalLight position={[3, 4, 5]} intensity={1.0} color="#ffffff" />
-            <pointLight position={[4, 3, 4]} intensity={0.8} color="#00d4ff" distance={15} decay={2} />
-            <pointLight position={[-4, -2, 3]} intensity={0.5} color="#ff2d75" distance={15} decay={2} />
+            <Environment preset="dawn" />
+
+            <ambientLight intensity={0.2} color="#4a0072" />
+            <directionalLight position={[3, 4, 5]} intensity={0.6} color="#ffffff" />
+            
+            <pointLight position={[4, 3, 4]} intensity={1.5} color="#8b0000" distance={15} decay={2} />
+            <pointLight position={[-4, -2, 3]} intensity={1.2} color="#4a0072" distance={15} decay={2} />
+            
             <OrbitControls
                 enablePan={true}
                 enableZoom={true}
                 enableRotate={true}
                 autoRotate
-                autoRotateSpeed={1.2}
-                minDistance={3}
-                maxDistance={12}
+                autoRotateSpeed={0.8}
+                minDistance={2}
+                maxDistance={15}
                 dampingFactor={0.05}
                 enableDamping
             />
-            <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.3}>
+            <Float speed={2.0} rotationIntensity={0.1} floatIntensity={0.2}>
                 <LoadedModel />
             </Float>
-            <OrbitRing radius={2.8} tubeRadius={0.015} color="#ff2d75" speed={0.4} axis="x" />
-            <OrbitRing radius={3.2} tubeRadius={0.012} color="#00d4ff" speed={-0.3} axis="y" />
-            <OrbitRing radius={2.5} tubeRadius={0.01} color="#b44dff" speed={0.25} axis="z" />
-            <OrbitingSpheres />
-            <Particles count={100} />
+            <FloatingPizzas />
+            <FloatingCheckers />
+            <FNAFParticles count={150} />
         </>
     );
 }
@@ -197,7 +246,7 @@ export default function ThreeScene() {
                     inset: 0,
                     borderRadius: '50%',
                     background:
-                        'radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%)',
+                        'radial-gradient(circle, rgba(74,0,114,0.15) 0%, transparent 70%)',
                     pointerEvents: 'none',
                     zIndex: 0,
                 }}
@@ -216,7 +265,9 @@ export default function ThreeScene() {
                 }}
                 dpr={1}
             >
-                <Scene />
+                <Suspense fallback={null}>
+                    <Scene />
+                </Suspense>
             </Canvas>
         </div>
     );
