@@ -8,7 +8,7 @@ const sanctUrl = import.meta.env.VITE_URL_SANCT;
 const repoUrlGame = import.meta.env.VITE_URL_GIT_GAME;
 const repoAppUrl = import.meta.env.VITE_URL_APP;
 const langbossUrl = import.meta.env.VITE_LANGBOSS;
-const karateUrl = import.meta.env.VITE_KARATE;
+const karateUrl = import.meta.env.VITE_karate;
 
 const projectsData: ProjectData[] = [
     {
@@ -73,7 +73,7 @@ const projectsData: ProjectData[] = [
     },
     {
         link: "jogo.png",
-        title: "Jogo Topdown",
+        title: "Monterra",
         desc: "Um jogo autoral, estilo Topdown e inspirado no clássico Stardew Valley, totalmente em pixel art.",
         fullDescription: "Projeto de desenvolvimento de jogos em formato 2D Top-Down, construído com mecânicas de exploração, movimentação com colisão, mapas detalhados em tileset e pixel art autoral inspirada nos clássicos RPGs da era 16-bits.",
         techs: ["JavaScript", "HTML5 Canvas", "Pixel Art", "Game Engine"],
@@ -102,8 +102,8 @@ const projectsData: ProjectData[] = [
         linkDemo: repoAppUrl,
     },
     {
-        link: "karate.png",
-        title: "Karate",
+        link: "torakan.png",
+        title: "Portal Torakan Academy",
         desc: "Plataforma completa de gestão de academias de Karatê, desenvolvida para ajudar os professores e alunos a entender melhor sobre a cultura e prática do Karatê-dō.",
         fullDescription: "Sistema voltado para a difusão da arte marcial Karatê-dō e gestão de dojos. Integra biblioteca de Kata, glossário de termos em japonês, exames de faixa e gerenciamento de alunos.",
         techs: ["React", "TypeScript", "Node.js", "Tailwind CSS"],
