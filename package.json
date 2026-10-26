@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "resume:pdf": "node scripts/build-resume-pdf.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

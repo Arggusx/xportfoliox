@@ -47,12 +47,9 @@ No meu portfólio podes encontrar detalhes e demonstrações de projetos como:
 
 A seção de boas-vindas deste portfólio apresenta uma cena 3D interativa renderizada em tempo real direto no navegador utilizando **[Three.js](https://threejs.org/)** e **[React Three Fiber](https://docs.pmnd.rs/react-three-fiber/)**.
 
-**Modelo 3D Utilizado:**
-O Bonnie renderizado na cena é o famoso modelo de demonstração PBR (Physically Based Rendering) padrão da biblioteca Khronos glTF.
-- **Nome:** Retro Five Nights at Freddy's
-- **Link Original (Sketchfab):** [Retro Five Nights at Freddy's]([https://sketchfab.com/models/b81008d513954189a063ff901f7abfe4](https://sketchfab.com/3d-models/retro-five-nights-at-freddys-86d0e5645f734a41971841ed5a3f6315))
+A cena mostra um notebook modelado inteiramente em código (sem arquivos de modelo externos), com teclado retroiluminado em neon e uma tela que exibe um editor digitando um trecho de código em TypeScript com destaque de sintaxe. A tela é desenhada em um `<canvas>` 2D e aplicada como textura no Three.js.
 
-A cena conta com iluminação estilizada com tons neon (azul, rosa e roxo), partículas flutuantes dinâmicas criadas proceduralmente e controles completos de órbita (pan, zoom e rotação), proporcionando uma experiência imersiva e responsiva sem a necessidade de plugins externos.
+A cena conta com iluminação estilizada em tons neon (azul, rosa e roxo), símbolos de código flutuantes (`</>`, `{ }`, `=>`...) e partículas criadas proceduralmente. Em computadores é possível girar o notebook arrastando com o mouse; em telas de toque a rotação fica desativada para não atrapalhar a rolagem. A animação respeita a preferência de movimento reduzido do sistema.
 
 ## Como Rodar Localmente
 

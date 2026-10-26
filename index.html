@@ -1,15 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Douglas Moreira | Front-end Developer</title>
+  <meta name="description" content="Portfolio of Douglas Moreira, a front-end developer focused on React, TypeScript and Tailwind. Projects, resume and contact." />
+  <meta name="author" content="Douglas Moreira" />
+  <meta name="theme-color" content="#030014" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://portfolio-douglas-dev.vercel.app/" />
+  <meta property="og:title" content="Douglas Moreira | Front-end Developer" />
+  <meta property="og:description" content="Projects, resume and contact of Douglas Moreira, front-end developer (React, TypeScript, Tailwind)." />
+  <meta property="og:image" content="https://portfolio-douglas-dev.vercel.app/minha-foto.jpg" />
+  <meta name="twitter:card" content="summary" />
+
   <link rel="icon" type="image/svg+xml" href="/code-xml.svg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Porfolio</title>
+  <script>
+    // Apply the saved theme before first paint to avoid a dark/light flash.
+    try {
+      if (localStorage.getItem("portfolio-theme") === "light") document.documentElement.dataset.theme = "light";
+    } catch (e) { }
+  </script>
 </head>
 
 <body>
