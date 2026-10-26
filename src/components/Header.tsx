@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Sun, Moon, Languages } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { useLanguage } from "../i18n/context";
-import { useTheme } from "../theme/context";
+import ThemeToggle from "./ThemeToggle";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const { lang, setLang, t } = useLanguage();
-    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,8 +25,6 @@ function Header() {
         { label: t.nav.tools, href: "#tools" },
     ];
 
-    const themeLabel = theme === "dark" ? t.theme.toLight : t.theme.toDark;
-
     const toggles = (
         <div className="flex items-center gap-2">
             <button
@@ -40,15 +37,7 @@ function Header() {
                 <Languages className="w-4 h-4" />
                 {t.langSwitch.short}
             </button>
-            <button
-                type="button"
-                onClick={toggleTheme}
-                aria-label={themeLabel}
-                title={themeLabel}
-                className="header-toggle p-1.5 rounded-lg cursor-pointer"
-            >
-                {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
+            <ThemeToggle />
         </div>
     );
 
