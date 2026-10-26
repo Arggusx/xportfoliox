@@ -1,0 +1,113 @@
+{
+  "name": "Douglas Moreira",
+  "contacts": {
+    "email": "dougclasher9@gmail.com",
+    "phone": "+55 82 99612-5491",
+    "linkedin": "linkedin.com/in/douglas-arg",
+    "linkedinUrl": "https://www.linkedin.com/in/douglas-arg",
+    "github": "github.com/Arggusx",
+    "githubUrl": "https://github.com/Arggusx",
+    "site": "portfolio-douglas-dev.vercel.app",
+    "siteUrl": "https://portfolio-douglas-dev.vercel.app"
+  },
+  "en": {
+    "pdf": "Douglas-Moreira-Resume-EN.pdf",
+    "title": "Front-end Developer",
+    "labels": {
+      "contact": "Contact",
+      "skills": "Skills",
+      "summary": "Summary",
+      "experience": "Experience",
+      "education": "Education",
+      "projects": "Featured Projects"
+    },
+    "summary": "22-year-old developer, Computer Science student and software development intern. Solid foundation in web development focused on front-end (React, TypeScript and Tailwind), with back-end experience in Node.js and databases through personal projects. I aim to master the logic and inner workings of the tools I use, building complete solutions with a focus on performance and accessibility.",
+    "experience": [
+      {
+        "role": "Software Development Intern",
+        "period": "Current",
+        "bullets": [
+          "Building and maintaining web interfaces with React, TypeScript and Tailwind CSS.",
+          "Integrating APIs and working closely with the Node.js back-end."
+        ]
+      },
+      {
+        "role": "Web Developer — Personal Projects",
+        "period": "2+ years",
+        "bullets": [
+          "Full online menu system: customer-facing site and admin dashboard with real-time orders.",
+          "Monterra: original 2D top-down game with pixel art, map collision and scenery interaction.",
+          "Web platforms such as Oratio Daily, LangBoss and Torakan Academy, with responsive interfaces."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "course": "B.S. in Computer Science",
+        "institution": "Unima | Afya",
+        "period": "In progress — 6th semester"
+      }
+    ],
+    "skills": [
+      { "group": "Front-end", "items": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Vite"] },
+      { "group": "Back-end", "items": ["Node.js", "PHP", "Laravel", "Python", "C#"] },
+      { "group": "Databases & tools", "items": ["MySQL", "PostgreSQL", "Git", "GitHub"] }
+    ],
+    "projects": [
+      { "name": "Online Menu + Management Dashboard", "desc": "Real-time orders, dynamic cart and sales dashboard." },
+      { "name": "Electronic Time Clock System", "desc": "Work-hour records, hour bank and management reports." },
+      { "name": "Torakan Academy Portal", "desc": "Karate academy management with katas, glossary and belt exams." },
+      { "name": "Monterra", "desc": "Original 2D pixel-art game inspired by Stardew Valley." }
+    ]
+  },
+  "pt": {
+    "pdf": "Douglas-Moreira-Curriculo-PT.pdf",
+    "title": "Desenvolvedor Front-end",
+    "labels": {
+      "contact": "Contato",
+      "skills": "Habilidades",
+      "summary": "Resumo",
+      "experience": "Experiência",
+      "education": "Formação",
+      "projects": "Projetos em destaque"
+    },
+    "summary": "Desenvolvedor de 22 anos, estudante de Ciência da Computação e estagiário na área. Base sólida em desenvolvimento web com foco em front-end (React, TypeScript e Tailwind) e atuação em back-end com Node.js e bancos de dados em projetos pessoais. Busco dominar a lógica e o funcionamento das ferramentas que utilizo, construindo soluções completas com foco em performance e acessibilidade.",
+    "experience": [
+      {
+        "role": "Estagiário em Desenvolvimento de Software",
+        "period": "Atual",
+        "bullets": [
+          "Desenvolvimento e manutenção de interfaces web com React, TypeScript e Tailwind CSS.",
+          "Integração com APIs e trabalho em conjunto com o back-end em Node.js."
+        ]
+      },
+      {
+        "role": "Desenvolvedor Web — Projetos Autorais",
+        "period": "2+ anos",
+        "bullets": [
+          "Sistema completo de cardápio online: site do cliente e painel administrativo com pedidos em tempo real.",
+          "Monterra: jogo 2D top-down autoral, com pixel art, colisão de mapa e interação com cenários.",
+          "Plataformas web como Oratio Daily, LangBoss e Torakan Academy, com interfaces responsivas."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "course": "Bacharelado em Ciência da Computação",
+        "institution": "Unima | Afya",
+        "period": "Cursando — 6º período"
+      }
+    ],
+    "skills": [
+      { "group": "Front-end", "items": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Vite"] },
+      { "group": "Back-end", "items": ["Node.js", "PHP", "Laravel", "Python", "C#"] },
+      { "group": "Banco de dados e ferramentas", "items": ["MySQL", "PostgreSQL", "Git", "GitHub"] }
+    ],
+    "projects": [
+      { "name": "Cardápio Online + Painel de Gerenciamento", "desc": "Pedidos em tempo real, carrinho dinâmico e dashboard de vendas." },
+      { "name": "Sistema de Ponto Eletrônico", "desc": "Registro de jornada, banco de horas e relatórios para a gestão." },
+      { "name": "Portal Torakan Academy", "desc": "Gestão de academias de Karatê, katas, glossário e exames de faixa." },
+      { "name": "Monterra", "desc": "Jogo 2D autoral em pixel art, inspirado em Stardew Valley." }
+    ]
+  }
+}
