@@ -21,43 +21,116 @@
       "education": "Education",
       "projects": "Featured Projects"
     },
-    "summary": "22-year-old developer, Computer Science student and software development intern. Solid foundation in web development focused on front-end (React, TypeScript and Tailwind), with back-end experience in Node.js and databases through personal projects. I aim to master the logic and inner workings of the tools I use, building complete solutions with a focus on performance and accessibility.",
+    "summary": "23-year-old front-end developer, Computer Science student (8th semester) and development intern at the Alagoas State Department of Education (SEDUC), with 3+ years of web development experience. Works mainly with React, TypeScript and Tailwind CSS, and also builds back-ends with Node.js, NestJS and Laravel, delivering fast and accessible interfaces.",
     "experience": [
       {
         "role": "Software Development Intern",
-        "period": "Current",
+        "company": "SEDUC - Alagoas State Department of Education | Maceió, AL",
+        "period": "Jun 2025 - Present",
         "bullets": [
-          "Building and maintaining web interfaces with React, TypeScript and Tailwind CSS.",
-          "Integrating APIs and working closely with the Node.js back-end."
+          "Developing the electronic time clock app used across all of SEDUC to record and manage employee clock-ins and work hours.",
+          "Working with the development team, building features end to end with Laravel (PHP) and MySQL, with Firebase integration and interfaces in Tailwind CSS."
         ]
       },
       {
-        "role": "Web Developer — Personal Projects",
-        "period": "2+ years",
+        "role": "Web Developer — Personal & University Projects",
+        "company": "Remote · React, TypeScript, Tailwind CSS, Node.js",
+        "period": "2023 - Present",
         "bullets": [
-          "Full online menu system: customer-facing site and admin dashboard with real-time orders.",
-          "Monterra: original 2D top-down game with pixel art, map collision and scenery interaction.",
-          "Web platforms such as Oratio Daily, LangBoss and Torakan Academy, with responsive interfaces."
+          "Building responsive web platforms and a 2D game, from interface to back-end and deploy.",
+          "Online menu + management dashboard, LangBoss, Torakan Academy, Oratio Daily and Monterra."
         ]
       }
     ],
     "education": [
       {
         "course": "B.S. in Computer Science",
-        "institution": "Unima | Afya",
-        "period": "In progress — 6th semester"
+        "institution": "Universidade de Maceió (Unima) | Afya",
+        "period": "8th semester — expected Jun 2027"
       }
     ],
     "skills": [
-      { "group": "Front-end", "items": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Vite"] },
-      { "group": "Back-end", "items": ["Node.js", "PHP", "Laravel", "Python", "C#"] },
-      { "group": "Databases & tools", "items": ["MySQL", "PostgreSQL", "Git", "GitHub"] }
+      {
+        "group": "Front-end",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS",
+          "Vite",
+          "React Native (learning)"
+        ]
+      },
+      {
+        "group": "Back-end",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "PHP",
+          "Laravel",
+          "Prisma",
+          "REST APIs"
+        ]
+      },
+      {
+        "group": "Other languages",
+        "items": [
+          "Python",
+          "Java",
+          "C++",
+          "C#"
+        ]
+      },
+      {
+        "group": "Databases",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "Firebase"
+        ]
+      },
+      {
+        "group": "Tools & concepts",
+        "items": [
+          "Git",
+          "GitHub",
+          "Vercel",
+          "Figma",
+          "Linux (basic)",
+          "OOP",
+          "Data Structures"
+        ]
+      }
     ],
     "projects": [
-      { "name": "Online Menu + Management Dashboard", "desc": "Real-time orders, dynamic cart and sales dashboard." },
-      { "name": "Electronic Time Clock System", "desc": "Work-hour records, hour bank and management reports." },
-      { "name": "Torakan Academy Portal", "desc": "Karate academy management with katas, glossary and belt exams." },
-      { "name": "Monterra", "desc": "Original 2D pixel-art game inspired by Stardew Valley." }
+      {
+        "name": "Torakan Academy Portal",
+        "desc": "Karate academy management for teachers and students, with katas, glossary and belt exams."
+      },
+      {
+        "name": "Oratio Daily",
+        "desc": "Site for people who want to learn more about the Catholic faith, with its own daily prayer API."
+      },
+      {
+        "name": "Electronic Time Clock System",
+        "desc": "Work-hour records, hour bank and management reports, used across SEDUC."
+      },
+      {
+        "name": "Online Menu + Management Dashboard",
+        "desc": "Real-time orders, dynamic cart and sales dashboard."
+      },
+      {
+        "name": "LangBoss",
+        "desc": "Gamified language-learning platform."
+      },
+      {
+        "name": "Monterra",
+        "desc": "Original 2D pixel-art game inspired by Stardew Valley."
+      }
     ]
   },
   "pt": {
@@ -71,43 +144,116 @@
       "education": "Formação",
       "projects": "Projetos em destaque"
     },
-    "summary": "Desenvolvedor de 22 anos, estudante de Ciência da Computação e estagiário na área. Base sólida em desenvolvimento web com foco em front-end (React, TypeScript e Tailwind) e atuação em back-end com Node.js e bancos de dados em projetos pessoais. Busco dominar a lógica e o funcionamento das ferramentas que utilizo, construindo soluções completas com foco em performance e acessibilidade.",
+    "summary": "Desenvolvedor front-end de 23 anos, estudante de Ciência da Computação (8º período) e estagiário de desenvolvimento na Secretaria de Estado da Educação de Alagoas (SEDUC), com mais de 3 anos de experiência em desenvolvimento web. Trabalho principalmente com React, TypeScript e Tailwind CSS, e também construo back-ends com Node.js, NestJS e Laravel, entregando interfaces rápidas e acessíveis.",
     "experience": [
       {
         "role": "Estagiário em Desenvolvimento de Software",
-        "period": "Atual",
+        "company": "SEDUC - Secretaria de Estado da Educação de Alagoas | Maceió, AL",
+        "period": "Jun 2025 - Atual",
         "bullets": [
-          "Desenvolvimento e manutenção de interfaces web com React, TypeScript e Tailwind CSS.",
-          "Integração com APIs e trabalho em conjunto com o back-end em Node.js."
+          "Desenvolvimento do sistema de ponto eletrônico usado em toda a SEDUC para registrar e gerenciar as batidas de ponto e a jornada dos servidores.",
+          "Atuação junto à equipe de desenvolvimento, construindo funcionalidades de ponta a ponta com Laravel (PHP) e MySQL, integração com Firebase e interfaces em Tailwind CSS."
         ]
       },
       {
-        "role": "Desenvolvedor Web — Projetos Autorais",
-        "period": "2+ anos",
+        "role": "Desenvolvedor Web — Projetos Pessoais e Acadêmicos",
+        "company": "Remoto · React, TypeScript, Tailwind CSS, Node.js",
+        "period": "2023 - Atual",
         "bullets": [
-          "Sistema completo de cardápio online: site do cliente e painel administrativo com pedidos em tempo real.",
-          "Monterra: jogo 2D top-down autoral, com pixel art, colisão de mapa e interação com cenários.",
-          "Plataformas web como Oratio Daily, LangBoss e Torakan Academy, com interfaces responsivas."
+          "Construção de plataformas web responsivas e de um jogo 2D, da interface ao back-end e deploy.",
+          "Cardápio online + painel de gerenciamento, LangBoss, Torakan Academy, Oratio Daily e Monterra."
         ]
       }
     ],
     "education": [
       {
         "course": "Bacharelado em Ciência da Computação",
-        "institution": "Unima | Afya",
-        "period": "Cursando — 6º período"
+        "institution": "Universidade de Maceió (Unima) | Afya",
+        "period": "8º período — previsão de conclusão em jun/2027"
       }
     ],
     "skills": [
-      { "group": "Front-end", "items": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Vite"] },
-      { "group": "Back-end", "items": ["Node.js", "PHP", "Laravel", "Python", "C#"] },
-      { "group": "Banco de dados e ferramentas", "items": ["MySQL", "PostgreSQL", "Git", "GitHub"] }
+      {
+        "group": "Front-end",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS",
+          "Vite",
+          "React Native (aprendendo)"
+        ]
+      },
+      {
+        "group": "Back-end",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "PHP",
+          "Laravel",
+          "Prisma",
+          "APIs REST"
+        ]
+      },
+      {
+        "group": "Outras linguagens",
+        "items": [
+          "Python",
+          "Java",
+          "C++",
+          "C#"
+        ]
+      },
+      {
+        "group": "Banco de dados",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "Firebase"
+        ]
+      },
+      {
+        "group": "Ferramentas e conceitos",
+        "items": [
+          "Git",
+          "GitHub",
+          "Vercel",
+          "Figma",
+          "Linux (básico)",
+          "POO",
+          "Estruturas de Dados"
+        ]
+      }
     ],
     "projects": [
-      { "name": "Cardápio Online + Painel de Gerenciamento", "desc": "Pedidos em tempo real, carrinho dinâmico e dashboard de vendas." },
-      { "name": "Sistema de Ponto Eletrônico", "desc": "Registro de jornada, banco de horas e relatórios para a gestão." },
-      { "name": "Portal Torakan Academy", "desc": "Gestão de academias de Karatê, katas, glossário e exames de faixa." },
-      { "name": "Monterra", "desc": "Jogo 2D autoral em pixel art, inspirado em Stardew Valley." }
+      {
+        "name": "Portal Torakan Academy",
+        "desc": "Gestão de academias de Karatê para professores e alunos, com katas, glossário e exames de faixa."
+      },
+      {
+        "name": "Oratio Daily",
+        "desc": "Site para quem quer conhecer mais da fé católica, com API própria de oração diária."
+      },
+      {
+        "name": "Sistema de Ponto Eletrônico",
+        "desc": "Registro de jornada, banco de horas e relatórios para a gestão, usado em toda a SEDUC."
+      },
+      {
+        "name": "Cardápio Online + Painel de Gerenciamento",
+        "desc": "Pedidos em tempo real, carrinho dinâmico e dashboard de vendas."
+      },
+      {
+        "name": "LangBoss",
+        "desc": "Plataforma gamificada de aprendizado de idiomas."
+      },
+      {
+        "name": "Monterra",
+        "desc": "Jogo 2D autoral em pixel art, inspirado em Stardew Valley."
+      }
     ]
   }
 }

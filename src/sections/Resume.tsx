@@ -57,6 +57,7 @@ function Resume() {
                                             <h5 className="font-bold text-strong text-sm">{job.role}</h5>
                                             <span className="text-xs text-pink-500 font-bold">{job.period}</span>
                                         </div>
+                                        <p className="text-xs text-muted font-semibold mt-0.5">{job.company}</p>
                                         <ul className="mt-2 space-y-1.5 list-disc list-outside pl-4 marker:text-sky-400">
                                             {job.bullets.map((b) => (
                                                 <li key={b} className="text-xs sm:text-sm text-body leading-relaxed">{b}</li>
